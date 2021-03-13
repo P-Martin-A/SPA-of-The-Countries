@@ -1,0 +1,19 @@
+.header_navigation {
+  @include size(50%, 100%);
+  
+  .header_navigation-list {
+    @include size(100%, 100%);
+    @include display-flex(flex-end, center);
+
+    .header_navigation-list-item {
+      margin: 0 .5rem;
+
+      .header_navigation-list-item-link {
+        font-size: 1.5rem;
+        &:hover {
+          color: $black;
+        }
+      }
+    }
+  }
+}

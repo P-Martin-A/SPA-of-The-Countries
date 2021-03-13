@@ -1,0 +1,20 @@
+header {
+  grid-area: 1 / 1 / 2 / -1;
+  @include display-flex(space-between, center);
+  padding: 1rem 2rem;
+  box-shadow: 0 .1rem 1rem $grey;
+
+  .header_title {
+    @include size(50%, 100%);
+    font-size: 2rem;
+    letter-spacing: .4rem;
+    text-transform: uppercase;
+
+    .header_title-link {
+      font-size: inherit;
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+}

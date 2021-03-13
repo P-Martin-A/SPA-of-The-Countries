@@ -1,7 +1,6 @@
 const PATH = require('path'),
       HTML_WEBPACK_PLUGIN = require('html-webpack-plugin')
-const { plugins } = require('../../Platzi/SPA-Rick-and-Morty-API/webpack.config')
-
+ 
 module.exports = {
   entry: './src/index.js',
   output: {
@@ -23,12 +22,10 @@ module.exports = {
       {
         test: /\.css?$/i,
         exclude: /node_modules/,
-        use: {
-          loader: [
-            'style-loader',
-            'css-loader'
-          ]
-        }
+        use: [
+          'style-loader',
+          'css-loader'
+        ]        
       }
     ]
   },

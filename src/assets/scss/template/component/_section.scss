@@ -1,0 +1,36 @@
+.main_sectionCountry {
+  @include size(100%, 100%);
+  @include display-flex(space-around, center) {
+    flex-wrap: wrap
+  };
+
+  .main_sectionCountry-figure {
+    @include size(100%, 100%);
+    @include laptop() {
+      @include size(50%, 100%);
+    };
+
+    .main_sectionCountry-figure-image {
+      @include size(100%, 100%);
+    }
+  }
+
+  .main_sectionCountry-article {
+    @include size(100%, auto);
+    padding: 2rem;
+    @include laptop() {
+      @include size(50%, 100%);
+    };
+
+    .main_sectionCountry-article-list {
+      @include size(100%, 100%);
+      @include display-flex(center, flex-start) {
+        flex-direction: column;
+      };
+
+      .main_sectionCountry-article-list-item {
+        font-size: 4vw;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin display-flex($justify-content, $align-items) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  @content;
+}
+
+@mixin display-grid() {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  row-gap: 2rem;
+}
+
+
+// MEDIA QUERIES
+
+// TABLET
+@mixin tablet() {
+  @media (min-width: 640px) {
+    @content;
+  }
+}
+
+// LAPTOP
+@mixin laptop() {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+// DESKTOP
+@mixin desktop() {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}

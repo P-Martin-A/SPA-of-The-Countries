@@ -5,9 +5,11 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
-    "strat": "webpack-cli serve --open --mode development"
+    "start": "webpack-cli serve --open --mode development"
   },
-  "keywords": [],
+  "keywords": [
+    "JavaScript"
+  ],
   "author": "YO",
   "license": "ISC",
   "devDependencies": {
