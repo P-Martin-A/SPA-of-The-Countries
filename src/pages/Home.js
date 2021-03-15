@@ -2,6 +2,7 @@ import getData from '../assets/utils/getData'
 
 const HOME = async () => {
   const COUNTRIES = await getData() 
+  
   const VIEW = COUNTRIES.map(country => `
     <article class="main_article">
       <a class="main_article-country" href="#/${country.name.toLocaleLowerCase()}" alt="${country.name}">

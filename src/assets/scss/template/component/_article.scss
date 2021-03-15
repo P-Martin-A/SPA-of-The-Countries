@@ -1,0 +1,23 @@
+.main_article {
+  @include size(10vw, 20rem);
+  min-width: 280px;    
+  max-width: 1200px;
+  margin-bottom: 5rem;
+  box-shadow: 0 0 1rem $grey;
+  &:hover {
+    box-shadow: 0 0 1rem $black;
+  }
+
+  .main_article-country {
+    @include size(100%, 100%);
+    
+    .main_article-country-figure {
+      @include size(inherit, inherit);
+
+      .main_article-country-figure-image {
+        @include size(inherit, inherit);
+        object-fit: cover;        
+      }
+    }
+  }
+}

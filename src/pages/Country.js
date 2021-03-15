@@ -5,6 +5,8 @@ const COUNTRY = async () => {
   const ID = getHash(),
         COUNTRY = await getData(ID)
 
+  let population = new Intl.NumberFormat('es').format(COUNTRY[0].population)
+
   const VIEW = `
     <section class="main_sectionCountry">
       <figure class="main_sectionCountry-figure">
@@ -22,7 +24,7 @@ const COUNTRY = async () => {
           </li>
           <li class="main_sectionCountry-article-list-item">
             <span class="main_sectionCountry-article-list-item-span">Population:</span>
-            <b class="main_sectionCountry-article-list-item-b">${COUNTRY[0].population}</b>
+            <b class="main_sectionCountry-article-list-item-b">${population}</b>
           </li>
         </ul>
       </article>

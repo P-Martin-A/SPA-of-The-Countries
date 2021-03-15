@@ -6,19 +6,20 @@
 
   .main_sectionCountry-figure {
     @include size(100%, 100%);
-    @include laptop() {
+    @include tablet() {
       @include size(50%, 100%);
     };
 
     .main_sectionCountry-figure-image {
       @include size(100%, 100%);
+      box-shadow: 0 0 .5rem $black;
     }
   }
 
   .main_sectionCountry-article {
     @include size(100%, auto);
     padding: 2rem;
-    @include laptop() {
+    @include tablet() {
       @include size(50%, 100%);
     };
 
@@ -29,7 +30,10 @@
       };
 
       .main_sectionCountry-article-list-item {
-        font-size: 4vw;
+        font-size: 2.5rem;
+        @include tablet() {
+          font-size: 3vw;
+        };
       }
     }
   }
